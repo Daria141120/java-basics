@@ -28,7 +28,7 @@ public class DataTypes {
 
     public static void task3Division() {
         int number = 10500;
-        int result = (number / 10) / 10;
+        double result = ((double) number / 10) / 10;
         System.out.println(result);
     }
 
