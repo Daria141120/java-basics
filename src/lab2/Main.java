@@ -38,6 +38,5 @@ public class Main {
         System.out.println(longNumb1+" * "+longNumb2+" = "+calc.multiply(longNumb1,longNumb2));
         System.out.println(longNumb1+" / "+longNumb2+" = "+calc.division(longNumb1,longNumb2));
 
-
     }
 }

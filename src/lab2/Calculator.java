@@ -12,7 +12,6 @@ public class Calculator {
         return a + b;
     }
 
-
     public int subtraction(int a, int b){
         return a - b;
     }
@@ -23,7 +22,6 @@ public class Calculator {
         return a - b;
     }
 
-
     public int multiply(int a, int b){
         return a * b;
     }
@@ -33,7 +31,6 @@ public class Calculator {
     public long multiply(long a, long b){
         return a * b;
     }
-
 
     public double division(int a, int b){
         return a * 1.0 / b;
