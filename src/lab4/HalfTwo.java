@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class HalfTwo {
     //task 2.1
-    public static boolean isSort(int[] massive) {
-        for (int i = 0; i < massive.length - 1; i++) {
-            if (massive[i] > massive[i + 1]) {
+    public static boolean isSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
                 return false;
             }
         }
@@ -23,36 +23,36 @@ public class HalfTwo {
         System.out.print("Array length: ");
         lengthMassive = scanner.nextInt();
 
-        int[] massive = new int[lengthMassive];
+        int[] array = new int[lengthMassive];
         System.out.println("Numbers of array:");
-        for (int i = 0; i < massive.length; i++) {
-            massive[i] = scanner.nextInt();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = scanner.nextInt();
         }
 
-        System.out.println("Result: "+Arrays.toString(massive));
+        System.out.println("Result: "+Arrays.toString(array));
     }
 
     //task 2.3
-    public static int [] exchangeFirstLast(int [] massive){
-        int [] newMassive = massive.clone();
+    public static int [] exchangeFirstLast(int [] array){
+        int [] newArray = array.clone();
 
         int temp;
-        temp = newMassive[0];
-        newMassive[0] = newMassive[newMassive.length - 1];
-        newMassive[newMassive.length - 1] = temp;
+        temp = newArray[0];
+        newArray[0] = newArray[newArray.length - 1];
+        newArray[newArray.length - 1] = temp;
 
-        return newMassive;
+        return newArray;
     }
 
     //task 2.4
-    public static int searchIndexFirstUnique(int[] massive) {
+    public static int searchIndexFirstUnique(int[] array) {
         boolean flagNotFound = true;
-        for (int i = 0; i < massive.length; i++, flagNotFound = true) {
-            for (int j = 0; j < massive.length; j++) {
+        for (int i = 0; i < array.length; i++, flagNotFound = true) {
+            for (int j = 0; j < array.length; j++) {
                 if (i == j) {
                     continue;
                 }
-                if (massive[i] == massive[j]) {
+                if (array[i] == array[j]) {
                     flagNotFound = false;
                     break;
                 }

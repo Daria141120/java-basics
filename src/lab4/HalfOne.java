@@ -37,7 +37,9 @@ public class HalfOne {
 
     //task 1.3
     public static boolean isSumEqual() {
-        int a, b, res;
+        int a;
+        int b;
+        int res;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите первое число: ");
@@ -66,18 +68,18 @@ public class HalfOne {
     }
 
     //task 1.5
-    public static boolean is3FirstOrLast(int [] massive){
-        if (massive.length < 2){
+    public static boolean is3FirstOrLast(int [] array){
+        if (array.length < 2){
             System.out.println("Длина массива должна быть больше или равна двум");
             return false;
         }
 
-        return (massive[0] == 3) || (massive[massive.length - 1] == 3);
+        return (array[0] == 3) || (array[array.length - 1] == 3);
     }
 
     //task 1.6
-    public static boolean isOneOrThreeInMass(int [] massive){
-        for (int j : massive){
+    public static boolean isOneOrThreeInMass(int [] array){
+        for (int j : array){
             if ((j == 1) || (j == 3)){
                 return true;
             }

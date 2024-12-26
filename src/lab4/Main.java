@@ -13,28 +13,28 @@ public class Main {
         System.out.println("Результат: " + HalfOne.isSumEqual());
         System.out.println("Результат: " + HalfOne.isNumbMore());
 
-        int[] massive = {1, 2, 3, 1, 3};
-        System.out.println("array = " + Arrays.toString(massive));
-        System.out.println("3 - первое или последнее число массива? - " + HalfOne.is3FirstOrLast(massive));
+        int[] array = {1, 2, 3, 1, 3};
+        System.out.println("array = " + Arrays.toString(array));
+        System.out.println("3 - первое или последнее число массива? - " + HalfOne.is3FirstOrLast(array));
 
-        int[] massive2 = {6, 5, 6, 7, 1, 8};
-        System.out.println("array = " + Arrays.toString(massive2));
-        System.out.println("Массив содержит 1 или 3? - " + HalfOne.isOneOrThreeInMass(massive2));
+        int[] array2 = {6, 5, 6, 7, 1, 8};
+        System.out.println("array = " + Arrays.toString(array2));
+        System.out.println("Массив содержит 1 или 3? - " + HalfOne.isOneOrThreeInMass(array2));
 
 
 //Test second half lab4
 
-        int[] massive3 = {5, 1, 6, 7};
-        System.out.println(Arrays.toString(massive3));
-        if (HalfTwo.isSort(massive3)) {
+        int[] array3 = {5, 1, 6, 7};
+        System.out.println(Arrays.toString(array3));
+        if (HalfTwo.isSort(array3)) {
             System.out.println("OK");
         } else {
             System.out.println("Please, try again");
         }
 
-        int[] massive4 = {1, 1, 6, 7, 7};
-        System.out.println(Arrays.toString(massive4));
-        if (HalfTwo.isSort(massive4)) {
+        int[] array4 = {1, 1, 6, 7, 7};
+        System.out.println(Arrays.toString(array4));
+        if (HalfTwo.isSort(array4)) {
             System.out.println("OK");
         } else {
             System.out.println("Please, try again");
@@ -42,18 +42,18 @@ public class Main {
 
         HalfTwo.readOutMassive();
 
-        int [] massive5 = {5,1,6,5,4,77,7};
-        System.out.println("Array 1: " + Arrays.toString(massive5));
-        System.out.println("Array 2: " + Arrays.toString(HalfTwo.exchangeFirstLast(massive5)));
+        int [] array5 = {5,1,6,5,4,77,7};
+        System.out.println("Array 1: " + Arrays.toString(array5));
+        System.out.println("Array 2: " + Arrays.toString(HalfTwo.exchangeFirstLast(array5)));
 
 
-        int [] massive6 = {5,1,6,5,4,17,88,1,6,4,0};
-        System.out.println(Arrays.toString(massive6));
-        int index = HalfTwo.searchIndexFirstUnique(massive6);
+        int [] array6 = {5,1,6,5,4,17,88,1,6,4,0};
+        System.out.println(Arrays.toString(array6));
+        int index = HalfTwo.searchIndexFirstUnique(array6);
         if (index == -1) {
             System.out.println("Нет уникальных элементов");
         } else {
-            System.out.println("Первый уникальный элемент = "+massive6[index]);
+            System.out.println("Первый уникальный элемент = "+ array6[index]);
         }
 
     }
