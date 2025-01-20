@@ -31,7 +31,17 @@ public class Main {
                 Map.entry(new User("Ly"), 1),
                 Map.entry(new User("Bob"), 11)
         );
-        getPoints(usersPoints);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter name : ");
+        String name = scanner.next();
+        int points = getPoints(usersPoints, name);
+
+        if (points != -1) {
+            System.out.printf("%s : %d points \n", name, points);
+        } else {
+            System.out.print("User not found\n");
+        }
+
     }
 
     public static <T> HashSet<T> removeDuplicate(Collection<T> collection) {
@@ -67,22 +77,8 @@ public class Main {
         System.out.println("LinkedList time GET: " + (System.currentTimeMillis() - startTime));
     }
 
-    public static void getPoints(Map<User, Integer> mapUsersPoints) {
-        Scanner scanner = new Scanner(System.in);
-        String name = "";
-        int points;
-
-        System.out.println("Enter name : ");
-        name = scanner.next();
-        points = mapUsersPoints.getOrDefault(new User(name), -1);
-
-        if (points != -1) {
-            System.out.printf("%s : %d points \n", name, points);
-        } else {
-            System.out.print("User not found\n");
-        }
-
-
+    public static int getPoints(Map<User, Integer> mapUsersPoints, String name) {
+        return mapUsersPoints.getOrDefault(new User(name), -1);
     }
 
 
